@@ -29,16 +29,12 @@ This project implements a credit card system inspired by American Express, with 
    ```sh
    git clone https://github.com/yourusername/credit-card-system.git
    cd credit-card-system
+   
 Create and Activate a Virtual Environment:
-
-sh
-Copy code
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-Install Dependencies:
 
-sh
-Copy code
+Install Dependencies:
 pip install -r requirements.txt
 Set Up the MySQL Database:
 
@@ -57,19 +53,24 @@ POST /add_credit_card: Add a credit card to a user.
 POST /add_transaction: Add a transaction with fraud detection.
 POST /make_payment: Make a payment towards a credit card.
 POST /update_credit_score: Update a user's credit score.
+
 Security
 Basic Authentication: Protects API endpoints. Use the admin username with password adminpass for access.
 Input Validation: Ensures secure data handling and prevents SQL injection.
+
 Fraud Detection
 The fraud detection model is built using a Random Forest Classifier from scikit-learn.
 To retrain the model, modify and run train_model.py with your dataset.
+
 Additional Security Features
 HTTPS: Ensure the server is configured to use HTTPS for encrypted communication.
 Data Validation: Validate inputs and outputs rigorously to prevent security vulnerabilities.
+
 Future Improvements
 Front-end improvement
 Implement role-based access control for finer-grained security.
 Expand the dataset for training a more robust fraud detection model.
 Add logging and monitoring for real-time alerts on suspicious activities.
+
 Contributing
 Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
